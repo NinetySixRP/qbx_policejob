@@ -43,9 +43,9 @@ lib.addCommand('grantlicense', {
         return exports.qbx_core:Notify(source, locale('error.error_rank_license'), 'error')
     end
 
-    if not config.validLicenses[args.license] then
-        return exports.qbx_core:Notify(source, locale('info.license_type'), 'error')
-    end
+    -- if not config.validLicenses[args.license] then
+    --     return exports.qbx_core:Notify(source, locale('info.license_type'), 'error')
+    -- end
 
     local searchedPlayer = exports.qbx_core:GetPlayer(args.id)
     if not searchedPlayer then return end
